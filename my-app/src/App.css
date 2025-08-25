@@ -73,7 +73,7 @@ p {
   left: 25px;
   transform: translateX(-50%);
   top: 15px;
-  background-color: #0000007a;
+  background-color: #2b2b2b86;
   width: 20px;
   height: 20px;
   z-index: 3333 !important;
@@ -103,6 +103,9 @@ p {
   max-width: 500px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px #00000084;
+  box-shadow: 0px 0px 5px 0px #000000a0;
   padding-left: 50px;
+}
+a{
+  color: white;
 }
