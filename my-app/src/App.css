@@ -108,4 +108,6 @@ p {
 }
 a{
   color: white;
+  white-space: pre-wrap;
+  word-break: break-all;
 }

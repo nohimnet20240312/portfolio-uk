@@ -109,18 +109,18 @@ function App() {
           })}
         </Section>
 
-        {/* <Section heading="Contact me" background={"var(--deep-night)"}>
+        <Section heading="Contact me" background={"var(--deep-night)"}>
           {Array.from(Object.entries(contactData)).map(([key, value]) => {
             return (
               <>
-                <div className="punch skill-card my-3 text-white p-3">
+                <div className="punch w-auto  skill-card my-3 text-white p-3">
                   <div className="row-1 text-2xl">{key}</div>
                   <div className="row-2 font-light">{value}</div>
                 </div>
               </>
             );
           })}
-        </Section> */}
+        </Section>
         <div className="contact-me">hello</div>
       </div>
     </>
