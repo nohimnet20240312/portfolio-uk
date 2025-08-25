@@ -1,4 +1,6 @@
 import Header from "../comps/header";
+import logo from "../assets/logo.jpg";
+import avatar from "../assets/hero.jpg";
 
 let imageSize = 200;
 
@@ -16,7 +18,7 @@ export default function Hero({ className, style }) {
             style={{
               width: imageSize,
               height: imageSize,
-              backgroundImage: 'url("./src/assets/hero.jpg")',
+              backgroundImage: `${avatar}`,
               backgroundSize: "cover",
               backgroundPosition: "0px -20px",
               backgroundRepeat: "no-repeat",
@@ -33,7 +35,12 @@ export default function Hero({ className, style }) {
             Hello my name is Nohim hasitha, A Computer science undergraduate
             student studying at University of Hertfordshire Hatfield United
             Kingdom.
-            <img src="./src/assets/logo.jpg" style={{width:"50%"}} className="rounded-xl mt-4" alt="" />
+            <img
+              src={logo}
+              style={{ width: "50%" }}
+              className="rounded-xl mt-4"
+              alt=""
+            />
             <button className="btn">Download CV</button>
           </div>
         </main>
