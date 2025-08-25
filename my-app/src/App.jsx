@@ -121,6 +121,16 @@ function App() {
             );
           })}
         </Section>
+        <Section heading={"View CV"}>
+          <div className="w-[400px] h-screen lg:w-[800px]  sm:w-[500px] md:h-[800px]">
+            <iframe
+              src={`${import.meta.env.BASE_URL}/NohimHasithaResume.pdf`}
+              title="My CV"
+              className="w-full h-full"
+              style={{ border: "none" }}
+            />
+          </div>
+        </Section>
         <div className="contact-me">hello</div>
       </div>
     </>
