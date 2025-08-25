@@ -18,7 +18,7 @@ export default function Hero({ className, style }) {
             style={{
               width: imageSize,
               height: imageSize,
-              backgroundImage: `${avatar}`,
+              backgroundImage: `url(${avatar})`,
               backgroundSize: "cover",
               backgroundPosition: "0px -20px",
               backgroundRepeat: "no-repeat",
