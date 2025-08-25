@@ -41,11 +41,11 @@ function App() {
   return (
     <>
       <div
-        className="m-0 p-0 text-base relative"
+        className="w-svw m-0 p-0 text-base relative"
         style={{ backgroundColor: "var(--deep-night)" }}
       >
         <div
-          className={`notification pl-11 punch text-xl rounded-lg text-white fixed left-3 top-4 ${
+          className={`notification pl-11 punch text-xl rounded-lg text-white fixed left-3 top-22 ${
             availability == true ? "bg-lime-500" : "bg-red-400"
           } p-3`}
         >
