@@ -74,7 +74,7 @@ function App() {
           }}
         ></div>
         <Hero
-          className={"flex w-svw text-center flex-col text-base"}
+          className={"flex w-full text-center flex-col text-base"}
           style={{ color: "white", backgroundColor: "var(--steel)" }}
         ></Hero>
         <div className="text-xl font-thin flex flex-col justify-center items-center p-10 text-inherit">
@@ -109,7 +109,7 @@ function App() {
           })}
         </Section>
 
-        <Section heading="Contact me" background={"var(--deep-night)"}>
+        {/* <Section heading="Contact me" background={"var(--deep-night)"}>
           {Array.from(Object.entries(contactData)).map(([key, value]) => {
             return (
               <>
@@ -120,7 +120,7 @@ function App() {
               </>
             );
           })}
-        </Section>
+        </Section> */}
         <div className="contact-me">hello</div>
       </div>
     </>
