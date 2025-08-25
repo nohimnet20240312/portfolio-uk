@@ -5,6 +5,7 @@ import "./App.css";
 import Hero from "./secs/hero";
 import Highlight from "./comps/Highlight";
 import DetailsCard from "./comps/DetailsCard";
+import Heading from "./comps/Heading";
 
 let immigrationData = {
   Name: "Nohim hasitha weedagama arachchi",
@@ -23,21 +24,46 @@ let studyData = {
   Study: "Bsc (Hons) Computer Science",
   residency: "Telford court hertfordshire AL10 9UT",
 };
+let skillData = {
+  "Reliability & Punctuality": "Arriving on time, consistent attendance, and completing shifts/tasks dependably.",
+  "Communication (Verbal & Written)": "Clear, polite communication with colleagues, managers and customers; able to write simple messages or reports.",
+  "Teamwork": "Working cooperatively, supporting colleagues, and contributing to a positive team environment.",
+  "Time Management & Prioritisation": "Balancing study and work, prioritising tasks under busy conditions, and meeting deadlines.",
+  "Customer Service": "Understanding customer needs, polite interaction, complaint handling and delivering positive experiences.",
+  "Adaptability & Flexibility": "Willingness to take varied tasks/shifts and adjust quickly to new procedures or busy periods."
+};
+
+
+let availability = true;
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
       <div
-        className="m-0 p-0 text-base"
+        className="m-0 p-0 text-base relative"
         style={{ backgroundColor: "var(--deep-night)" }}
       >
+        <div
+          className={`notification pl-11 punch text-xl rounded-lg text-white fixed left-3 top-4 ${
+            availability == true ? "bg-lime-500" : "bg-red-400"
+          } p-3`}
+        >
+          {availability == true ? "Available for Hire" : "Unavailable for Hire"}
+        </div>
+        <div
+          className="layer absolute top-0 left-0 w-full h-full z-1000"
+          style={{
+            backgroundColor: "rgba(255, 147, 41, 0.08)",
+            pointerEvents: "none",
+          }}
+        ></div>
         <Hero
           className={"flex w-svw text-center flex-col text-base"}
           style={{ color: "white", backgroundColor: "var(--steel)" }}
         ></Hero>
         <div className="text-xl font-thin flex flex-col justify-center items-center p-10 text-inherit">
-          <p>
+          <p className="text-2xl">
             Hello my name is Nohim hasitha, A Computer science undergraduate
             student studying at
             <Highlight color="purple">
@@ -55,8 +81,23 @@ function App() {
             data={studyData}
           ></DetailsCard>
         </div>
-        <div className="skills w-full h-svh bg-amber-200">
-          <div className="row-1">Skills</div>
+        <div className="skills flex flex-col items-center  p-5 w-full steel">
+          <div className="row-1">
+            <Heading className="text-3xl mb-4 text-white  font-thin">Skills</Heading>
+          </div>
+          <div className="flex flex-col row-2">
+            {Array.from(Object.entries(skillData)).map(([key, value]) => {
+              return(<>
+              <div className="punch skill-card my-3 text-white p-3">
+              <div className="row-1 text-2xl">{key}</div>
+              <div className="row-2 font-light">
+                {value}
+              </div>
+            </div>
+              </>)
+            })}
+            
+          </div>
         </div>
         <div className="contact-me">hello</div>
       </div>

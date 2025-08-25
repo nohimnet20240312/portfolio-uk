@@ -1,7 +1,14 @@
 import Header from "../comps/header";
 import logo from "../assets/logo.jpg";
 import avatar from "../assets/hero.jpg";
+import CV from "../pdfs/NohimHasithaResume.pdf";
 
+const handleButton = function () {
+  const link = document.createElement("a");
+  link.href = { CV };
+  link.download = "NohimHasithaCV.pdf";
+  link.click();
+};
 let imageSize = 200;
 
 export default function Hero({ className, style }) {
@@ -14,7 +21,7 @@ export default function Hero({ className, style }) {
           style={{ color: "inherit", minHeight: "60vh" }}
         >
           <div
-            className="img-section rounded-full mb-7"
+            className="img-section rounded-full mb-7 shadow-2xl"
             style={{
               width: imageSize,
               height: imageSize,
@@ -35,13 +42,15 @@ export default function Hero({ className, style }) {
             Hello my name is Nohim hasitha, A Computer science undergraduate
             student studying at University of Hertfordshire Hatfield United
             Kingdom.
-            <img
+            {/* <img
               src={logo}
               style={{ width: "50%" }}
               className="rounded-xl mt-4"
               alt=""
-            />
-            <button className="btn">Download CV</button>
+            /> */}
+            <button className="btn" onClick={handleButton}>
+              Download CV
+            </button>
           </div>
         </main>
       </div>
