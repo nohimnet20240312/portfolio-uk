@@ -14,7 +14,7 @@ let imageSize = 200;
 export default function Hero({ className, style }) {
   return (
     <>
-      <div className={className} style={style}>
+      <div id="Home" className={className} style={style}>
         <Header></Header>
         <main
           className="h-full w-full flex flex-col justify-center items-center p-5"

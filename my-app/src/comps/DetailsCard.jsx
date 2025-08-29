@@ -17,8 +17,9 @@ export default function DetailsCard({ header, data }) {
           </h3>
         </div>
         <div className="row-2 w-full flex flex-col justify-center">
-          {Array.from(Object.entries(data)).map(([key, value]) => (
+          {Array.from(Object.entries(data)).map(([key, value],index) => (
             <div
+             key={`Card-${index}`}
               className="row grid grid-cols-3 py-1"
               style={{ gridTemplateColumns: "0.3fr 0.1fr 1fr" }}
             >

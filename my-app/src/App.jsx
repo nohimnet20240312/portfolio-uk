@@ -51,6 +51,10 @@ let contactData = {
 
 let availability = true;
 function App() {
+  let [scroll, setScroll] = useState("");
+
+  
+
   const [count, setCount] = useState(0);
 
   return (
@@ -58,6 +62,7 @@ function App() {
       <div
         className="w-svw m-0 p-0 text-base relative"
         style={{ backgroundColor: "var(--deep-night)" }}
+        onScroll={(element)=>{document.Scroll}}
       >
         <div
           className={`notification pl-11 punch text-xl rounded-lg text-white fixed left-3 top-22 ${
@@ -69,7 +74,7 @@ function App() {
         <div
           className="layer absolute top-0 left-0 w-full h-full z-1000"
           style={{
-            backgroundColor: "rgba(200, 73, 5, 0.21)",
+            backgroundColor: "rgba(250, 83, 15, 0.18)",
             pointerEvents: "none",
           }}
         ></div>
@@ -77,7 +82,10 @@ function App() {
           className={"flex w-full text-center flex-col text-base"}
           style={{ color: "white", backgroundColor: "var(--steel)" }}
         ></Hero>
-        <div className="text-xl font-thin flex flex-col justify-center items-center p-10 text-inherit">
+        <div
+          id="About Me"
+          className="text-xl font-thin flex flex-col justify-center items-center p-10 text-inherit"
+        >
           <p className="text-2xl">
             Hello my name is Nohim hasitha, A Computer science undergraduate
             student studying at
@@ -96,7 +104,7 @@ function App() {
             data={studyData}
           ></DetailsCard>
         </div>
-        <Section heading={"Skills"} background="steel">
+        <Section id={"Skills"} heading={"Skills"} background="steel">
           {Array.from(Object.entries(skillData)).map(([key, value]) => {
             return (
               <>
@@ -109,7 +117,11 @@ function App() {
           })}
         </Section>
 
-        <Section heading="Contact me" background={"var(--deep-night)"}>
+        <Section
+          id={"Contact me"}
+          heading="Contact me"
+          background={"var(--deep-night)"}
+        >
           {Array.from(Object.entries(contactData)).map(([key, value]) => {
             return (
               <>
@@ -131,7 +143,13 @@ function App() {
             />
           </div>
         </Section>
-        <div className="contact-me">hello</div>
+        <Section styles={{justifyContent:"flex-start"}} background={"var(--deep-night)"} className={"sm:flex-col justify-start items-stretch p-0 m-0 bg-amber-600"}>
+          <div className="flex w-full justify-between px-3" >
+            <div className="col-1">&copy; Designed by nohim. All rights reserved.<br></br></div>
+            {/* <div className="col-2">Email me at nohim.net@gmail.com</div> */}
+          </div>
+        </Section>
+        {/* <div className="contact-me">hello</div> */}
       </div>
     </>
   );

@@ -1,10 +1,24 @@
 import Heading from "../comps/Heading";
-export default function Section({ heading, background, children }) {
+export default function Section({
+  className,
+  heading,
+  background,
+  children,
+  id,
+  styles={},
+}) {
+  const prop = { backgroundColor: background || "var(--steel)" };
+
   return (
     <>
       <div
-        className="skills flex flex-col items-center  p-5 w-full steel"
-        style={{ backgroundColor: background || "var(--steel)" }}
+        id={id}
+        className={
+          `skills flex flex-col items-center  p-5 w-full steel` +
+          " " +
+          className
+        }
+        style={{ ...prop, ...styles }}
       >
         <div className="row-1">
           <Heading className="text-3xl mb-4 text-white  font-thin">
